@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h1>Book List</h1>
+
+<ul>
+    <li th:each = "book : ${books}">
+
+        <!--/*@thymesVar id="book" type="java"*/-->
+        <span th:text="${book.id}"></span>
+        <span th:text=" ${book.name}"></span>
+        <span th:text=" ${book.author}"></span>
+        <span th:text="${book.code}"></span>
+        <span th:text="${book.price}"></span>
+    </li>
+    <!--<form action="#" th:action="@{/add}" th:object="${book}" method="post">-->
+        <!--<p>Name: <input type="text" th:field="*{name}" /></p>-->
+        <!--<p>Author: <input type="text" th:field="*{author}" /></p>-->
+        <!--<p>Code: <input type="text" th:field="*{code}" /></p>-->
+        <!--<p>Price: <input type="text" th:field="*{price}" /></p>-->
+        <!--<p><input type="submit" value="Submit" /></p>-->
+    <!--</form>-->
+
+
+</ul>
+
+<br/>
+<a href="/booklist">List books</a>
+
+</body>
+</html>
